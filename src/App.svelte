@@ -2,6 +2,7 @@
 	import { Router, Link, Route } from "svelte-routing";
 	import Adverbs from "./pages/Adverbs.svelte";
 	import Kana from "./pages/Kana.svelte";
+	import Verbs from "./pages/Verbs.svelte";
 	
   export let url = "";
 </script>
@@ -10,10 +11,12 @@
 	<nav>
 	<Link to="/adverbs">Adverbes</Link>
 	<Link to="/kana">Kana</Link>
+	<Link to="/verbs">Verbes</Link>
 </nav>
 	<main>
 		<Route path="adverbs" component="{Adverbs}" />
 		<Route path="kana" component="{Kana}" />
+		<Route path="verbs" component="{Verbs}" />
 	</main>
 </Router>
 
@@ -30,4 +33,5 @@
 			max-width: 800px;
 		}
 	}
+
 </style>
