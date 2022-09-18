@@ -1,10 +1,21 @@
 <script>
+	import { Router, Link, Route } from "svelte-routing";
 	import Adverbs from "./pages/Adverbs.svelte";
+	import Kana from "./pages/Kana.svelte";
+	
+  export let url = "";
 </script>
 
-<main>
-	<Adverbs />
-</main>
+<Router url="{url}">
+	<nav>
+	<Link to="/adverbs">Adverbes</Link>
+	<Link to="/kana">Kana</Link>
+</nav>
+	<main>
+		<Route path="adverbs" component="{Adverbs}" />
+		<Route path="kana" component="{Kana}" />
+	</main>
+</Router>
 
 <style>
 	main {
